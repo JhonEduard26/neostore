@@ -1,5 +1,8 @@
 "use client";
 
+import { Moon, Sun, SunMoon } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -7,15 +10,20 @@ import {
   DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuGroup,
-  DropdownMenuItem,
   DropdownMenuCheckboxItem,
 } from "@/components/ui/dropdown-menu";
-import { Moon, Sun, SunMoon } from "lucide-react";
-import { useTheme } from "next-themes";
 
 const ModeToggle = () => {
+  const [mount, setMount] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMount(true);
+  }, []);
+
+  if (!mount) {
+    return null; // Prevents hydration mismatch
+  }
 
   return (
     <DropdownMenu>
