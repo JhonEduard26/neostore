@@ -9,8 +9,9 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import ProductPrice from "./product-price";
+import type { ProductType } from "@/db/schema";
 
-const ProductCard = ({ product }: { product: any }) => {
+const ProductCard = ({ product }: { product: ProductType }) => {
   return (
     <Card>
       <CardHeader>

@@ -15,6 +15,13 @@
       "when": 1748663298580,
       "tag": "0001_fix-init",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1749425273112,
+      "tag": "0002_low_barracuda",
+      "breakpoints": true
     }
   ]
 }
